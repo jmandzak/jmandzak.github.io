@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog Visualizer</title>
+    <link rel="stylesheet" href="stylesheet.css?t=randomNum">
+</head>
+  
+<body>
+    <section>
+        <div id="widthContainer">
+        <div class="dropdown">
+            <label for="language">Select a Catalog Year:</label>
+            <select name="catalogSelection" id="dropDownWrite"></select>
+            <br>
+            <!-- <button type="button" class="TRMenu" id="addClass">Add New Class</button> -->
+            <button type="button" class="TRMenu" id="addPrereq">Add/Remove Prerequisite</button>
+            <button type="button" class="TRMenu" id="updatePrereqs">Update Prerequisite Lines</button>
+            <button type="button" class="TRMenu" id="editCoreq">Add/Remove Corequisite</button>
+            <button type="button" class="TRMenu" id="editClasses">Edit Classes</button>
+            <button type="button" class="TRMenu" id="highlightPrereqs">Highlight Prerequisites</button>
+            <button type="button" class="TRMenu" id="changeArrowStyle">Prereq Arrow Style</button>
+
+            <form class="prereqForm" id="prereqForm" autocomplete="off">
+                <h2>Add/Remove Prerequisite</h2>
+                <label>
+                    <strong>Class</strong>
+                </label>
+                <input type="text" id="desiredClass" placeholder="Class Name" required>
+                <br>
+                Please enter class name in form PREFIX NUMBER, ex: COSC 101
+                <br>
+                <br>
+                <label>
+                    <strong>Prerequisite</strong>
+                </label>
+                <input type="text" id="prereq" placeholder="Class Name"required>
+                <br>
+                Please enter class name in form PREFIX NUMBER, ex: COSC 101
+                <br>
+                <br>
+                <button type="submit" class="addPrereqButton" id="addPrereqButton" value="add">Add</button>
+                <button type="submit" class="removePrereqButton" id="removePrereqButton" value="remove">Remove</button>
+                <button type="button" class="cancelButton" id="cancelButton" >Close</button>
+            </form>
+
+            <form class="coreqForm" id="coreqForm" autocomplete="off">
+                <h2>Add/Remove Corequisite</h2>
+                <label>
+                    <strong>Class 1</strong>
+                </label>
+                <input type="text" id="coreq1" placeholder="Class Name" required>
+                <br>
+                Please enter class name in form PREFIX NUMBER, ex: COSC 101
+                <br>
+                <br>
+                <label>
+                    <strong>Class 2</strong>
+                </label>
+                <input type="text" id="coreq2" placeholder="Class Name"required>
+                <br>
+                Please enter class name in form PREFIX NUMBER, ex: COSC 101
+                <br>
+                <br>
+                <button type="submit" class="addCoreqButton" id="addCoreqButton" value="add">Add</button>
+                <button type="submit" class="removeCoreqButton" id="removeCoreqButton" value="remove">Remove</button>
+                <button type="button" class="cancelCoreqButton" id="cancelCoreqButton" >Close</button>
+            </form>
+
+            <!-- <form class="newClassForm" id="newClassForm" autocomplete="off">
+                <h2>New Class</h2>
+                <label>
+                    <strong>Class</strong>
+                </label>
+                <input type="text" id="newClass" placeholder="Class Name" required>
+                <br>
+                Please enter class name in form PREFIX NUMBER, ex: COSC 101
+                <br>
+                <br>
+                <label>
+                    <strong>Semester</strong>
+                </label>
+                <input type="text" id="newClassSem" placeholder="Semester Number"required>
+                <br>
+                Please enter the semester number in form NUMBER, ex: 1
+                <br>
+                <br>
+                <button type="submit" class="submitButton" id="submitButton" >Submit</button>
+                <button type="button" class="cancelButton" id="cancelButton" >Close</button>
+            </form> -->
+            <button type="print" class="printButton" id="printButton" onclick="printFunction()">Print</button>
+        </div>
+        <h1>Catalog Visualizer</h1>
+
+        <div id="boxSection" class="boxSection"></div>
+
+    </div>
+    </section>
+
+    
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="node_modules/leader-line/leader-line.min.js"></script>
+<script type="text/javascript" src="dist/bundle.js"></script>
+</body>
+  
+</html>
